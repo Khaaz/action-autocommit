@@ -1,0 +1,30 @@
+{
+	"name": "action-autocommit",
+	"version": "1.0.0",
+	"description": "Action to commit and push changes to the current branch",
+	"main": "dist/index.js",
+	"author": "Khaazz <khaaz.dev@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"prebuild": "yarn lint",
+		"build": "ncc build src/main.ts --minify",
+		"lint": "eslint src --ext .ts"
+	},
+	"dependencies": {
+		"@actions/core": "^1.0.0",
+		"@actions/exec": "^1.0.0",
+		"@actions/io": "^1.0.0"
+	},
+	"devDependencies": {
+		"@axonteam/eslint-config": "^2.2.0",
+		"@types/node": "^12.7.2",
+		"@typescript-eslint/eslint-plugin": "^2.0.0",
+		"@typescript-eslint/parser": "^2.0.0",
+		"@zeit/ncc": "^0.20.4",
+		"eslint": "^6.2.1",
+		"typescript": "^3.7.2"
+	},
+	"eslintConfig": {
+		"extends": "@axonteam/eslint-config"
+	}
+}

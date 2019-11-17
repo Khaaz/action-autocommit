@@ -1,0 +1,5 @@
+name: 'auto-commit'
+description: 'Commit and push current changes in the repo to the current branch.'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
